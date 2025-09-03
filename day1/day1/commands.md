@@ -77,3 +77,14 @@ python manage.py migrate
 <!-- 👉 makemigrations → generates instructions.
      👉 migrate → applies changes to the database (SQLite by default)
 -->
+
+<!-- Create Superuser (Admin Login) -->
+
+python manage.py createsuperuser
+
+<!-- 👉 This makes Post appear in Django admin dashboard. -->
+
+from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)
